@@ -1,0 +1,51 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "C/C++: gcc.exe build active file",
+			"command": "C:\\mingw64\\bin\\gcc.exe", //这里指编译器
+			"args": [
+				"-fdiagnostics-color=always",
+				"-g",
+				// "${file}", // 这里指的是被 编译的文件，选中哪个文件，就编译哪个文件
+				"${workspaceFolder}\\*.c", // 这里就是编译工作区下面的所有.c文件
+				// "${workspaceFolder}\\*.cpp", // 这里就是编译工作区下的所有cpp文件
+				"-o",
+				// "${fileDirname}\\${fileBasenameNoExtension}.exe", //这里是 生成的可执行程序的路径
+				"${workspaceFolder}\\${workspaceRootFolderName}.exe" // 这里是 编译后的可执行程序的路径和文件名，用的是工作区的名字
+			],
+			"options": {
+				"cwd": "C:\\mingw64\\bin"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "compiler: C:\\mingw64\\bin\\gcc.exe"
+		},
+		{
+            "type": "cppbuild",
+            "label": "C/C++: g++.exe build active file",
+            "command": "C:\\mingw64\\bin\\g++.exe", //这里指编译器
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                // "${file}", // 这里指的是被 编译的文件，选中哪个文件，就编译哪个文件
+                // "${workspaceFolder}\\*.c", // 这里就是编译工作区下面的所有.c文件
+                "${workspaceFolder}\\*.cpp", // 这里就是编译工作区下的所有cpp文件
+                "-o",
+                // "${fileDirname}\\${fileBasenameNoExtension}.exe", //这里是 生成的可执行程序的路径
+                "${workspaceFolder}\\${workspaceRootFolderName}.exe" // 这里是 编译后的可执行程序的路径和文件名，用的是工作区的名字
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+			"problemMatcher":[
+				"$gcc"
+			],
+            "group": "build",
+            "detail": "compiler: C:\\mingw64\\bin\\g++.exe"
+        }
+	]
+}

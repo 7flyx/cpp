@@ -1,0 +1,25 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "C/C++: gcc.exe build active file",
+			"command": "C:\\mingw64\\bin\\gcc.exe", //这里指编译器
+			"args": [
+				"-fdiagnostics-color=always",
+				"-g",
+				"${file}", // 这里指的是被 编译的文件
+				"-o",
+				"${fileDirname}\\${fileBasenameNoExtension}.exe" //这里是 生成的可执行程序的路径
+			],
+			"options": {
+				"cwd": "C:\\mingw64\\bin"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "compiler: C:\\mingw64\\bin\\gcc.exe"
+		}
+	]
+}
